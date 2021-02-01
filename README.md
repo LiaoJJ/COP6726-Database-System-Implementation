@@ -1,7 +1,7 @@
 # This is my course project of COP6726 Database System Implementation
 
 ---
-# [proj1 Heap file implementation](/proj1/P1)
+# [proj1 Heap file implementation](/P1)
 
 ## Abstract
 A Heap File System consists of many pages, all of them will be stored in the disk except one buffer page.
@@ -25,8 +25,28 @@ DBFile.open() will be able to open a *.bin file
 
 
 
+# Google Test
+
+Usage
+We change the Makefile in order to use Google Test
+
+```
+make clean
+make gtest
+./gtest.out
+```
 
 
+Results of gtest:
+![123](./pictures/p1_1.png)
+
+
+#### Reference for gtest
+installation
+https://github.com/google/googletest/blob/master/googletest/README.md#standalone-cmake-project
+
+Turtorial
+https://github.com/google/googletest/blob/master/docs/primer.md
 
 
 

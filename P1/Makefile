@@ -1,6 +1,7 @@
 CC = g++ -O2 -Wno-deprecated 
 
 tag = -i
+gtest_tag = -std=c++11 -lgtest -lgtest_main
 
 ifdef linux
 tag = -n
@@ -11,7 +12,13 @@ test.out: Record.o Comparison.o ComparisonEngine.o Schema.o File.o DBFile.o y.ta
 	
 main: Record.o Comparison.o ComparisonEngine.o Schema.o File.o y.tab.o lex.yy.o main.o
 	$(CC) -o main Record.o Comparison.o ComparisonEngine.o Schema.o File.o y.tab.o lex.yy.o main.o # -lfl
-	
+
+gtest: Record.o Comparison.o ComparisonEngine.o Schema.o File.o y.tab.o lex.yy.o gtest.o
+	$(CC) -o gtest.out Record.o Comparison.o ComparisonEngine.o Schema.o File.o y.tab.o lex.yy.o gtest.o $(gtest_tag)
+
+gtest.o: gtest.cpp
+	$(CC) -g -c gtest.cpp $(gtest_tag)
+
 test.o: test.cc
 	$(CC) -g -c test.cc
 
