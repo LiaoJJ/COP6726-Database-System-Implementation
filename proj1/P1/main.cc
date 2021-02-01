@@ -33,7 +33,7 @@ int main () {
     myComparison.Print ();
 
     // now open up the text file and start procesing it
-    FILE *tableFile = fopen ("/Users/ljj/dbi/tpch-dbgen/10M/lineitem.tbl", "r");
+    FILE *tableFile = fopen ("../../tpch-dbgen/10M/lineitem.tbl", "r");
 
     Record temp;
     Schema mySchema ("catalog", "lineitem");
@@ -46,8 +46,8 @@ int main () {
     // the CNF expression that was typed in
     //Write data into File
     DBFile dbf;
-    dbf.Create(NULL, heap, NULL);
-    dbf.Open(NULL);
+//    dbf.Create("lineitem.bin", heap, NULL);
+    dbf.Open("lineitem.bin");
 //    File file;
 //    file.Open(0, "test111.txt");
 //    off_t writeIndex = 0;
@@ -99,7 +99,7 @@ int main () {
     }
     dbf.Close();
 
-    dbf.Open(NULL);
+    dbf.Open("lineitem.bin");
     cout << "Third traverse" << "\n";
     cout << "Third traverse" << "\n";
     cout << "Third traverse" << "\n";

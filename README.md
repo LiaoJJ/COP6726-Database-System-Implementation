@@ -1,7 +1,7 @@
 # This is my course project of COP6726 Database System Implementation
 
 ---
-# proj1 Heap file implementation
+# [proj1 Heap file implementation](/proj1/P1)
 
 ## Abstract
 A Heap File System consists of many pages, all of them will be stored in the disk except one buffer page.
@@ -60,3 +60,7 @@ But still, there is segment fault
 ## PLAN B connect to CISE thunder computer
 connect to VPN of UFL
 , `ssh liao@thunder.cise.ufl.edu`, also segment fault
+
+# Bugs already known
+While printing, Double variable will only display some part of it. However, this doesn't influence the accuracy of query.
+So, please refer to the number in the *.tbl files instead of print out result.
