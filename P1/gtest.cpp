@@ -41,6 +41,16 @@ TEST_F(DBFileTest, CloseTest) {
     EXPECT_EQ(dbfile->Close(), 1);
 }
 
+TEST_F(DBFileTest, OpenAndCloseTest) {
+    dbfile->Open("./lineitem.bin");
+    EXPECT_EQ(dbfile->Close(), 1);
+}
+
+TEST_F(DBFileTest, CreateAndCloseTest) {
+    dbfile->Create("./test.bin", heap, NULL);
+    EXPECT_EQ(dbfile->Close(), 1);
+}
+
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
