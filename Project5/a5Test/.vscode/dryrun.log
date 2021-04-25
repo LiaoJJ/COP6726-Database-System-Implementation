@@ -1,0 +1,25 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/haochengsong/Desktop/Database Implementation/Project4_2/a4-2Test'
+yacc -d Parser.y
+sed -i y.tab.c -e "s/  __attribute__ ((__unused__))$/# ifndef __cplusplus\n  __attribute__ ((__unused__));\n# endif/"
+g++ -c y.tab.c
+lex  Lexer.l
+gcc  -c lex.yy.c
+g++ -std=c++11 -Wno-deprecated -g -c Record.cc
+g++ -std=c++11 -Wno-deprecated -g -c Schema.cc
+g++ -std=c++11 -Wno-deprecated -g -c Comparison.cc
+g++ -std=c++11 -Wno-deprecated -g -c ComparisonEngine.cc
+g++ -std=c++11 -Wno-deprecated -g -c Function.cc
+g++ -std=c++11 -Wno-deprecated -g -c Pipe.cc
+g++ -std=c++11 -Wno-deprecated -g -c BigQ.cc
+g++ -std=c++11 -Wno-deprecated -g -c File.cc
+g++ -std=c++11 -Wno-deprecated -g -c DBFile.cc
+g++ -std=c++11 -Wno-deprecated -g -c DBFileHeap.cc
+g++ -std=c++11 -Wno-deprecated -g -c DBFileSorted.cc
+g++ -std=c++11 -Wno-deprecated -g -c DBFileTree.cc
+g++ -std=c++11 -Wno-deprecated -g -c NodeForQuery.cc
+g++ -std=c++11 -Wno-deprecated -g -c Statistics.cc
+g++ -std=c++11 -Wno-deprecated -g -c main.cc
+g++ -std=c++11 -Wno-deprecated -o a42.out y.tab.o lex.yy.o Record.o Schema.o Comparison.o ComparisonEngine.o Function.o Pipe.o BigQ.o File.o DBFile.o DBFileHeap.o DBFileSorted.o DBFileTree.o NodeForQuery.o Statistics.o main.o -lfl -lpthread
+make: Leaving directory `/Users/haochengsong/Desktop/Database Implementation/Project4_2/a4-2Test'
+ 

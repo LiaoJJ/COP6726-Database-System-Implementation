@@ -1,0 +1,153 @@
+enter: 
+Number of selects: 1
+Number of joins: 2
+GROUPING ON s.s_suppkey
+	Att s.s_suppkey: INT
+PRINTING TREE IN ORDER: 
+
+ *********** 
+SELECT FILE operation
+Input Pipe 0
+Output Pipe 2
+Output Schema: 
+	Att s.s_suppkey: INT
+	Att s.s_name: STRING
+	Att s.s_address: STRING
+	Att s.s_nationkey: INT
+	Att s.s_phone: STRING
+	Att s.s_acctbal: DOUBLE
+	Att s.s_comment: STRING
+
+ *********** 
+SELECT PIPE operation
+Input Pipe 2
+Output Pipe 4
+Output Schema: 
+	Att s.s_suppkey: INT
+	Att s.s_name: STRING
+	Att s.s_address: STRING
+	Att s.s_nationkey: INT
+	Att s.s_phone: STRING
+	Att s.s_acctbal: DOUBLE
+	Att s.s_comment: STRING
+SELECTION CNF :
+(s.s_acctbal > 2500.0)
+ *********** 
+SELECT FILE operation
+Input Pipe 0
+Output Pipe 3
+Output Schema: 
+	Att p.p_partkey: INT
+	Att p.p_name: STRING
+	Att p.p_mfgr: STRING
+	Att p.p_brand: STRING
+	Att p.p_type: STRING
+	Att p.p_size: INT
+	Att p.p_container: STRING
+	Att p.p_retailprice: DOUBLE
+	Att p.p_comment: STRING
+
+ *********** 
+SELECT FILE operation
+Input Pipe 0
+Output Pipe 1
+Output Schema: 
+	Att ps.ps_partkey: INT
+	Att ps.ps_suppkey: INT
+	Att ps.ps_availqty: INT
+	Att ps.ps_supplycost: DOUBLE
+	Att ps.ps_comment: STRING
+
+ *********** 
+JOIN operation
+Left Input Pipe 3
+Right Input Pipe 1
+Output Pipe 5
+Output Sceheme: 
+	Att p.p_partkey: INT
+	Att p.p_name: STRING
+	Att p.p_mfgr: STRING
+	Att p.p_brand: STRING
+	Att p.p_type: STRING
+	Att p.p_size: INT
+	Att p.p_container: STRING
+	Att p.p_retailprice: DOUBLE
+	Att p.p_comment: STRING
+	Att ps.ps_partkey: INT
+	Att ps.ps_suppkey: INT
+	Att ps.ps_availqty: INT
+	Att ps.ps_supplycost: DOUBLE
+	Att ps.ps_comment: STRING
+
+CNF: 
+(p.p_partkey = ps.ps_partkey)
+ *********** 
+JOIN operation
+Left Input Pipe 4
+Right Input Pipe 5
+Output Pipe 6
+Output Sceheme: 
+	Att s.s_suppkey: INT
+	Att s.s_name: STRING
+	Att s.s_address: STRING
+	Att s.s_nationkey: INT
+	Att s.s_phone: STRING
+	Att s.s_acctbal: DOUBLE
+	Att s.s_comment: STRING
+	Att p.p_partkey: INT
+	Att p.p_name: STRING
+	Att p.p_mfgr: STRING
+	Att p.p_brand: STRING
+	Att p.p_type: STRING
+	Att p.p_size: INT
+	Att p.p_container: STRING
+	Att p.p_retailprice: DOUBLE
+	Att p.p_comment: STRING
+	Att ps.ps_partkey: INT
+	Att ps.ps_suppkey: INT
+	Att ps.ps_availqty: INT
+	Att ps.ps_supplycost: DOUBLE
+	Att ps.ps_comment: STRING
+
+CNF: 
+(s.s_suppkey = ps.ps_suppkey)
+ *********** 
+GROUP BY operation
+Left Input Pipe 6
+Output Pipe 7
+Output Schema: 
+	Att s.s_suppkey: INT
+	Att s.s_name: STRING
+	Att s.s_address: STRING
+	Att s.s_nationkey: INT
+	Att s.s_phone: STRING
+	Att s.s_acctbal: DOUBLE
+	Att s.s_comment: STRING
+	Att p.p_partkey: INT
+	Att p.p_name: STRING
+	Att p.p_mfgr: STRING
+	Att p.p_brand: STRING
+	Att p.p_type: STRING
+	Att p.p_size: INT
+	Att p.p_container: STRING
+	Att p.p_retailprice: DOUBLE
+	Att p.p_comment: STRING
+	Att ps.ps_partkey: INT
+	Att ps.ps_suppkey: INT
+	Att ps.ps_availqty: INT
+	Att ps.ps_supplycost: DOUBLE
+	Att ps.ps_comment: STRING
+
+GROUPING ON 
+
+FUNCTION 
+ *********** 
+PROJECT operation
+Input Pipe 7
+Output Pipe 8
+Output Schema: 
+NumAtts =     1
+  0:     0 Int
+	Att s.s_suppkey: INT
+
+************

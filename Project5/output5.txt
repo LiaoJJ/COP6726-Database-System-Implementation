@@ -1,0 +1,114 @@
+TC1
+
+Enter your SQL: 
+
+You Sql has been parsed
+Optimal Plan has been built
+
+Current OUTPUT MODE: STDOUT
+--------------
+-------------------
+n.n_nationkey: [24]
+Total Count: 1
+
+***************************************************************************************************************************
+TC2
+
+Enter your SQL: 
+
+You Sql has been parsed
+Optimal Plan has been built
+
+Current OUTPUT MODE: STDOUT
+--------------
+-------------------
+n.n_name: [MOZAMBIQUE]
+-------------------
+n.n_name: [MOROCCO]
+-------------------
+n.n_name: [KENYA]
+-------------------
+n.n_name: [PERU]
+-------------------
+n.n_name: [UNITED STATES]
+-------------------
+n.n_name: [CHINA]
+-------------------
+n.n_name: [INDONESIA]
+-------------------
+n.n_name: [JAPAN]
+-------------------
+n.n_name: [VIETNAM]
+-------------------
+n.n_name: [INDIA]
+-------------------
+n.n_name: [GERMANY]
+-------------------
+n.n_name: [ROMANIA]
+-------------------
+n.n_name: [RUSSIA]
+-------------------
+n.n_name: [UNITED KINGDOM]
+-------------------
+n.n_name: [FRANCE]
+-------------------
+n.n_name: [JORDAN]
+-------------------
+n.n_name: [IRAN]
+-------------------
+n.n_name: [SAUDI ARABIA]
+-------------------
+n.n_name: [IRAQ]
+Total Count: 19
+
+***************************************************************************************************************************
+TC3
+
+Enter your SQL: 
+
+You Sql has been parsed
+Optimal Plan has been built
+
+Current OUTPUT MODE: STDOUT
+--------------
+-------------------
+SUM: [24]
+Total Count: 1
+
+***************************************************************************************************************************
+TC4
+
+Enter your SQL: 
+
+You Sql has been parsed
+Optimal Plan has been built
+
+Current OUTPUT MODE: STDOUT
+--------------
+-------------------
+SUM: [1]
+Total Count: 1
+
+***************************************************************************************************************************
+TC5
+
+Enter your SQL: 
+
+You Sql has been parsed
+Optimal Plan has been built
+
+Current OUTPUT MODE: STDOUT
+--------------
+-------------------
+SUM: [268287]
+-------------------
+SUM: [257125]
+-------------------
+SUM: [341936]
+-------------------
+SUM: [442436]
+-------------------
+SUM: [333702]
+Total Count: 5
+
+***************************************************************************************************************************

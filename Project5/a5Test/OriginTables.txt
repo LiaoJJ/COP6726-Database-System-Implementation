@@ -1,0 +1,85 @@
+Relation: region numOfTuple: 5
+JoinedRelation: region
+Attribute: r_regionkey numOfDistinct: 5
+Attribute: r_name numOfDistinct: 5
+Attribute: r_comment numOfDistinct: 5
+EndOfRelation
+Relation: nation numOfTuple: 25
+JoinedRelation: nation
+Attribute: n_nationkey numOfDistinct: 25
+Attribute: n_name numOfDistinct: 25
+Attribute: n_regionkey numOfDistinct: 25
+Attribute: n_comment numOfDistinct: 25
+EndOfRelation
+Relation: part numOfTuple: 200000
+JoinedRelation: part
+Attribute: p_partkey numOfDistinct: 200000
+Attribute: p_name numOfDistinct: 200000
+Attribute: p_mfgr numOfDistinct: 200000
+Attribute: p_brand numOfDistinct: 200000
+Attribute: p_type numOfDistinct: 200000
+Attribute: p_size numOfDistinct: 200000
+Attribute: p_container numOfDistinct: 200000
+Attribute: p_retailprice numOfDistinct: 200000
+Attribute: p_comment numOfDistinct: 200000
+EndOfRelation
+Relation: supplier numOfTuple: 10000
+JoinedRelation: supplier
+Attribute: s_suppkey numOfDistinct: 10000
+Attribute: s_name numOfDistinct: 10000
+Attribute: s_address numOfDistinct: 10000
+Attribute: s_nationkey numOfDistinct: 10000
+Attribute: s_phone numOfDistinct: 10000
+Attribute: s_acctbal numOfDistinct: 10000
+Attribute: s_comment numOfDistinct: 10000
+EndOfRelation
+Relation: partsupp numOfTuple: 800000
+JoinedRelation: partsupp
+Attribute: ps_partkey numOfDistinct: 800000
+Attribute: ps_suppkey numOfDistinct: 800000
+Attribute: ps_availqty numOfDistinct: 800000
+Attribute: ps_supplycost numOfDistinct: 800000
+Attribute: ps_comment numOfDistinct: 800000
+EndOfRelation
+Relation: customer numOfTuple: 150000
+JoinedRelation: customer
+Attribute: c_custkey numOfDistinct: 150000
+Attribute: c_name numOfDistinct: 150000
+Attribute: c_address numOfDistinct: 150000
+Attribute: c_nationkey numOfDistinct: 150000
+Attribute: c_phone numOfDistinct: 150000
+Attribute: c_acctbal numOfDistinct: 150000
+Attribute: c_mktsegment numOfDistinct: 150000
+Attribute: c_comment numOfDistinct: 150000
+EndOfRelation
+Relation: orders numOfTuple: 1500000
+JoinedRelation: orders
+Attribute: o_orderkey numOfDistinct: 1500000
+Attribute: o_custkey numOfDistinct: 1500000
+Attribute: o_orderstatus numOfDistinct: 1500000
+Attribute: o_totalprice numOfDistinct: 1500000
+Attribute: o_orderdate numOfDistinct: 1500000
+Attribute: o_orderpriority numOfDistinct: 1500000
+Attribute: o_clerk numOfDistinct: 1500000
+Attribute: o_shippriority numOfDistinct: 1500000
+Attribute: o_comment numOfDistinct: 1500000
+EndOfRelation
+Relation: lineitem numOfTuple: 6001215
+JoinedRelation: lineitem
+Attribute: l_orderkey numOfDistinct: 6001215
+Attribute: l_partkey numOfDistinct: 6001215
+Attribute: l_suppkey numOfDistinct: 6001215
+Attribute: l_linenumber numOfDistinct: 6001215
+Attribute: l_quantity  numOfDistinct: 6001215
+Attribute: l_extendedprice numOfDistinct: 6001215
+Attribute: l_discount numOfDistinct: 6001215
+Attribute: l_tax numOfDistinct: 6001215
+Attribute: l_returnflag numOfDistinct: 6001215
+Attribute: l_linestatus numOfDistinct: 6001215
+Attribute: l_shipdate numOfDistinct: 6001215
+Attribute: l_commitdate  numOfDistinct: 6001215
+Attribute: l_receiptdate numOfDistinct: 6001215
+Attribute: l_shipinstruct numOfDistinct: 6001215
+Attribute: l_shipmode numOfDistinct: 6001215
+Attribute: l_comment numOfDistinct: 6001215
+EndOfRelation
